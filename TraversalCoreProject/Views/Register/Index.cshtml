@@ -1,4 +1,4 @@
-﻿
+﻿@model TraversalCoreProject.Models.UserViewModel
 @{
     Layout = null;
 }
@@ -26,28 +26,31 @@
 				<h3>Yeni Kullanıcı</h3>
 				<div class="form-holder">
 					<span class="lnr lnr-user"></span>
-					<input type="text" class="form-control" placeholder="Adınız" name="Name">
+					<input type="text" class="form-control" placeholder="Adınız" asp-for="Name">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-user"></span>
-					<input type="text" class="form-control" placeholder="Soyadınız" name="Surname">
+					<input type="text" class="form-control" placeholder="Soyadınız" asp-for="Surname">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-user"></span>
-					<input type="text" class="form-control" placeholder="Kullanıcı Adınız" name="UserName">
+					<input type="text" class="form-control" placeholder="Kullanıcı Adınız" asp-for="UserName">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-envelope"></span>
-					<input type="text" class="form-control" placeholder="Mail Adresiniz" name="Email">
+					<input type="text" class="form-control" placeholder="Mail Adresiniz" asp-for="Email">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
-					<input type="password" class="form-control" placeholder="Şifreniz" name="Password">
+					<input type="password" class="form-control" placeholder="Şifreniz" asp-for="Password">
 				</div>
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
-					<input type="password" class="form-control" placeholder="Şifre Tekrarı" name="ConfirmPassword">
+					<input type="password" class="form-control" placeholder="Şifre Tekrarı" asp-for="ConfirmPassword">
 				</div>
+			
+@*				<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+*@				
 				<button>
 					<span>Kayıt Ol</span>
 				</button>
